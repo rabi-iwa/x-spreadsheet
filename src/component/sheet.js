@@ -858,7 +858,7 @@ export default class Sheet {
     this.editor = new Editor(
       formulas,
       () => this.getTableOffset(),
-      data.rows.height,
+      data.rows.height
     );
     // data validation
     this.modalValidation = new ModalValidation();
@@ -869,7 +869,7 @@ export default class Sheet {
     this.overlayerCEl = h('div', `${cssPrefix}-overlayer-content`)
       .children(
         this.editor.el,
-        this.selector.el,
+        this.selector.el
       );
     this.overlayerEl = h('div', `${cssPrefix}-overlayer`)
       .child(this.overlayerCEl);
@@ -885,7 +885,7 @@ export default class Sheet {
       this.horizontalScrollbar.el,
       this.contextMenu.el,
       this.modalValidation.el,
-      this.sortFilter.el,
+      this.sortFilter.el
     );
     // table
     this.table = new Table(this.tableEl.el, data);

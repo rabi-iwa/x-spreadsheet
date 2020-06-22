@@ -96,9 +96,9 @@ export default class Bottombar {
               xtoast('tip', 'it less than or equal to 10');
             }
           }),
-          h('span', '').child(this.moreEl),
-        ),
-      ),
+          h('span', '').child(this.moreEl)
+        )
+      )
     );
   }
 

@@ -38,7 +38,7 @@ function buildMenuItem(item) {
     })
     .children(
       item.title(),
-      h('div', 'label').child(item.label || ''),
+      h('div', 'label').child(item.label || '')
     );
 }
 

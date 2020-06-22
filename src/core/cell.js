@@ -185,7 +185,7 @@ const cellRender = (src, formulaMap, getCellText, cellList = []) => {
       stack,
       formulaMap,
       (x, y) => cellRender(getCellText(x, y), formulaMap, getCellText, cellList),
-      cellList,
+      cellList
     );
   }
   return src;

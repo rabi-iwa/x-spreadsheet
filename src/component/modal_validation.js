@@ -18,11 +18,11 @@ export default class ModalValidation extends Modal {
         it => t(`dataValidation.modeType.${it}`)),
       { required: true },
       `${t('dataValidation.range')}:`,
-      fieldLabelWidth,
+      fieldLabelWidth
     );
     const rf = new FormField(
       new FormInput('120px', 'E3 or E3:F12'),
-      { required: true, pattern: /^([A-Z]{1,2}[1-9]\d*)(:[A-Z]{1,2}[1-9]\d*)?$/ },
+      { required: true, pattern: /^([A-Z]{1,2}[1-9]\d*)(:[A-Z]{1,2}[1-9]\d*)?$/ }
     );
     const cf = new FormField(
       new FormSelect('list',
@@ -32,7 +32,7 @@ export default class ModalValidation extends Modal {
         it => this.criteriaSelected(it)),
       { required: true },
       `${t('dataValidation.criteria')}:`,
-      fieldLabelWidth,
+      fieldLabelWidth
     );
 
     // operator
@@ -42,31 +42,31 @@ export default class ModalValidation extends Modal {
         '160px',
         it => t(`dataValidation.operator.${it}`),
         it => this.criteriaOperatorSelected(it)),
-      { required: true },
+      { required: true }
     ).hide();
     // min, max
     const minvf = new FormField(
       new FormInput('70px', '10'),
-      { required: true },
+      { required: true }
     ).hide();
     const maxvf = new FormField(
       new FormInput('70px', '100'),
-      { required: true, type: 'number' },
+      { required: true, type: 'number' }
     ).hide();
     // value
     const svf = new FormField(
       new FormInput('120px', 'a,b,c'),
-      { required: true },
+      { required: true }
     );
     const vf = new FormField(
       new FormInput('70px', '10'),
-      { required: true, type: 'number' },
+      { required: true, type: 'number' }
     ).hide();
 
     super(t('contextmenu.validation'), [
       h('div', `${cssPrefix}-form-fields`).children(
         mf.el,
-        rf.el,
+        rf.el
       ),
       h('div', `${cssPrefix}-form-fields`).children(
         cf.el,
@@ -74,12 +74,12 @@ export default class ModalValidation extends Modal {
         minvf.el,
         maxvf.el,
         vf.el,
-        svf.el,
+        svf.el
       ),
       h('div', `${cssPrefix}-buttons`).children(
         new Button('cancel').on('click', () => this.btnClick('cancel')),
         new Button('remove').on('click', () => this.btnClick('remove')),
-        new Button('save', 'primary').on('click', () => this.btnClick('save')),
+        new Button('save', 'primary').on('click', () => this.btnClick('save'))
       ),
     ]);
     this.mf = mf;

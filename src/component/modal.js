@@ -11,9 +11,9 @@ export default class Modal {
     this.el = h('div', `${cssPrefix}-modal`).css('width', width).children(
       h('div', `${cssPrefix}-modal-header`).children(
         new Icon('close').on('click.stop', () => this.hide()),
-        this.title,
+        this.title
       ),
-      h('div', `${cssPrefix}-modal-content`).children(...content),
+      h('div', `${cssPrefix}-modal-content`).children(...content)
     ).hide();
   }
 

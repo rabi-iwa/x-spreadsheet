@@ -14,9 +14,9 @@ export function xtoast(title, content) {
   el.children(
     h('div', `${cssPrefix}-toast-header`).children(
       new Icon('close').on('click.stop', () => remove()),
-      title,
+      title
     ),
-    h('div', `${cssPrefix}-toast-content`).html(content),
+    h('div', `${cssPrefix}-toast-content`).html(content)
   );
   document.body.appendChild(el.el);
   document.body.appendChild(dimmer.el);

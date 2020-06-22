@@ -15,7 +15,7 @@ export default class FormSelect {
     }, width, this.el);
     this.el.children(
       this.itemEl = h('div', 'input-text').html(this.getTitle(key)),
-      this.suggest.el,
+      this.suggest.el
     ).on('click', () => this.show());
   }
 

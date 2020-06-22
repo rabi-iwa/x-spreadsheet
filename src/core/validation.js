@@ -86,7 +86,7 @@ class Validations {
     type, required, value, operator,
   }) {
     const validator = new Validator(
-      type, required, value, operator,
+      type, required, value, operator
     );
     const v = this.getByValidator(validator);
     if (v !== null) {

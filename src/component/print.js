@@ -74,9 +74,9 @@ export default class Print {
             h('div', '-right').children(
               h('div', `${cssPrefix}-buttons`).children(
                 new Button('cancel').on('click', btnClick.bind(this, 'cancel')),
-                new Button('next', 'primary').on('click', btnClick.bind(this, 'next')),
-              ),
-            ),
+                new Button('next', 'primary').on('click', btnClick.bind(this, 'next'))
+              )
+            )
           ),
         h('div', `${cssPrefix}-print-content`)
           .children(
@@ -86,18 +86,18 @@ export default class Print {
                 h('fieldset', '').children(
                   h('label', '').child(`${t('print.size')}`),
                   h('select', '').children(
-                    ...PAGER_SIZES.map((it, index) => h('option', '').attr('value', index).child(`${it[0]} ( ${it[1]}''x${it[2]}'' )`)),
-                  ).on('change', pagerSizeChange.bind(this)),
+                    ...PAGER_SIZES.map((it, index) => h('option', '').attr('value', index).child(`${it[0]} ( ${it[1]}''x${it[2]}'' )`))
+                  ).on('change', pagerSizeChange.bind(this))
                 ),
                 h('fieldset', '').children(
                   h('label', '').child(`${t('print.orientation')}`),
                   h('select', '').children(
-                    ...PAGER_ORIENTATIONS.map((it, index) => h('option', '').attr('value', index).child(`${t('print.orientations')[index]}`)),
-                  ).on('change', pagerOrientationChange.bind(this)),
-                ),
-              ),
-            ),
-          ),
+                    ...PAGER_ORIENTATIONS.map((it, index) => h('option', '').attr('value', index).child(`${t('print.orientations')[index]}`))
+                  ).on('change', pagerOrientationChange.bind(this))
+                )
+              )
+            )
+          )
       ).hide();
   }
 

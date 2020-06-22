@@ -89,7 +89,7 @@ class CellRange {
       other.sri < sri ? other.sri : sri,
       other.sci < sci ? other.sci : sci,
       other.eri > eri ? other.eri : eri,
-      other.eci > eci ? other.eci : eci,
+      other.eci > eci ? other.eci : eci
     );
   }
 

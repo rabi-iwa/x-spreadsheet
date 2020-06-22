@@ -215,7 +215,7 @@ export default class Selector {
         this.tl.el,
         this.t.el,
         this.l.el,
-        this.br.el,
+        this.br.el
       ).hide();
 
     // for performance

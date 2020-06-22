@@ -13,7 +13,7 @@ export default class Resizer {
         .css('position', 'absolute').hide(),
       this.hoverEl = h('div', `${cssPrefix}-resizer-hover`)
         .on('mousedown.stop', evt => this.mousedownHandler(evt)),
-      this.lineEl = h('div', `${cssPrefix}-resizer-line`).hide(),
+      this.lineEl = h('div', `${cssPrefix}-resizer-line`).hide()
     ).hide();
     // cell rect
     this.cRect = null;

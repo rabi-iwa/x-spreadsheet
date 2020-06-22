@@ -42,12 +42,12 @@ export default class SortFilter {
       buildMenu('divider'),
       h('div', `${cssPrefix}-filter`).children(
         this.filterhEl,
-        this.filterbEl,
+        this.filterbEl
       ),
       h('div', `${cssPrefix}-buttons`).children(
         new Button('cancel').on('click', () => this.btnClick('cancel')),
-        new Button('ok', 'primary').on('click', () => this.btnClick('ok')),
-      ),
+        new Button('ok', 'primary').on('click', () => this.btnClick('ok'))
+      )
     ).hide();
     // this.setFilters(['test1', 'test2', 'text3']);
     this.ci = null;

@@ -47,17 +47,17 @@ export default class Calendar {
               .child(new Icon('chevron-left')),
             h('a', 'calendar-next')
               .on('click.stop', () => this.next())
-              .child(new Icon('chevron-right')),
-          ),
+              .child(new Icon('chevron-right'))
+          )
         ),
         h('table', 'calendar-body').children(
           h('thead', '').child(
             h('tr', '').children(
-              ...t('calendar.weeks').map(week => h('th', 'cell').child(week)),
-            ),
+              ...t('calendar.weeks').map(week => h('th', 'cell').child(week))
+            )
           ),
-          this.bodyEl,
-        ),
+          this.bodyEl
+        )
       );
     this.selectChange = () => {};
   }
@@ -103,7 +103,7 @@ export default class Calendar {
             .on('click.stop', () => {
               this.selectChange(it1.d);
             })
-            .child(it1.d.getDate().toString()),
+            .child(it1.d.getDate().toString())
         );
       });
       return h('tr', '').children(...tds);

@@ -313,7 +313,7 @@ function getCellColByX(x, scrollOffsetx) {
     inits,
     cols.indexWidth,
     x,
-    i => cols.getWidth(i),
+    i => cols.getWidth(i)
   );
   if (left <= 0) {
     return { ci: -1, left: 0, width: cols.indexWidth };
@@ -463,7 +463,7 @@ export default class DataProxy {
     if (nci > cci) [sci, eci] = [cci, nci];
     else [sci, eci] = [nci, cci];
     selector.range = merges.union(new CellRange(
-      sri, sci, eri, eci,
+      sri, sci, eri, eci
     ));
     selector.range = merges.union(selector.range);
     // console.log('selector.range:', selector.range);

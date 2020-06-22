@@ -12,7 +12,7 @@ export default class DropdownItem extends Item {
     this.dd = this.dropdown();
     this.dd.change = it => this.change(tag, this.getValue(it));
     return super.element().child(
-      this.dd,
+      this.dd
     );
   }
 

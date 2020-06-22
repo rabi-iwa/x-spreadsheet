@@ -76,7 +76,7 @@ export default class Validator {
           v1 >= this.parseValue(min) && v1 <= this.parseValue(max),
           'between',
           min,
-          max,
+          max
         );
       }
       if (operator === 'nbe') {
@@ -85,49 +85,49 @@ export default class Validator {
           v1 < this.parseValue(min) || v1 > this.parseValue(max),
           'notBetween',
           min,
-          max,
+          max
         );
       }
       if (operator === 'eq') {
         return returnMessage(
           v1 === this.parseValue(value),
           'equal',
-          value,
+          value
         );
       }
       if (operator === 'neq') {
         return returnMessage(
           v1 !== this.parseValue(value),
           'notEqual',
-          value,
+          value
         );
       }
       if (operator === 'lt') {
         return returnMessage(
           v1 < this.parseValue(value),
           'lessThan',
-          value,
+          value
         );
       }
       if (operator === 'lte') {
         return returnMessage(
           v1 <= this.parseValue(value),
           'lessThanEqual',
-          value,
+          value
         );
       }
       if (operator === 'gt') {
         return returnMessage(
           v1 > this.parseValue(value),
           'greaterThan',
-          value,
+          value
         );
       }
       if (operator === 'gte') {
         return returnMessage(
           v1 >= this.parseValue(value),
           'greaterThanEqual',
-          value,
+          value
         );
       }
     }

@@ -180,7 +180,7 @@ export default class Editor {
           .on('keydown', evt => keydownEventHandler.call(this, evt)),
         this.textlineEl = h('div', 'textline'),
         this.suggest.el,
-        this.datepicker.el,
+        this.datepicker.el
       )
       .on('mousemove.stop', () => {})
       .on('mousedown.stop', () => {});
